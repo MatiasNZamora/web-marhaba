@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@import "@fontsource/marcellus/400.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/amiri/400.css";
+@import "@fontsource/amiri/700.css";
+
+@theme {
+  --color-brick: #9b2226;
+  --color-brick-deep: #6e1416;
+  --color-brick-light: #c1444a;
+  --color-charcoal: #14100e;
+  --color-charcoal-soft: #1e1815;
+  --color-sand: #f2e8dc;
+  --color-sand-dim: #cfc3b2;
+  --color-gold: #c9a227;
+  --color-gold-soft: #e4c866;
+  --color-olive: #4a5d3a;
+
+  --font-display: "Marcellus", "Georgia", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-arabic: "Amiri", serif;
+
+  --animate-marquee: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-charcoal);
+  color: var(--color-sand);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+::selection {
+  background-color: var(--color-brick);
+  color: var(--color-sand);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
